@@ -3,12 +3,35 @@ html {
   scroll-behavior: smooth; }
 
 body {
+  font-family: "Ubuntu", sans-serif;
   height: 100%;
-  color: white;
-  background-color: black; }
+  color: #c9c9c9;
+  background-color: black;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-shadow: 0 0 2px grey; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h1, h2 {
+  font-family: "Ubuntu", sans-serif;
+  text-shadow: 0 0 3px grey;
+  color: #c9c9c9; }
+
+.container-about,
+.container-projects,
+.container-contact {
+  padding: 0 40px 40px; }
+
+.container-footer {
+  padding: 0 40px; }
 
 .side-scrollbar {
-  background-color: blue;
+  background-color: rgba(2, 2, 29, 0.6);
   height: 100%;
   width: 200px;
   position: fixed;
@@ -17,28 +40,99 @@ body {
   left: 0; }
 
 .section-about, .section-projects, .section-contact {
-  height: 100%;
-  margin-left: 200px;
-  padding-top: 7%; }
+  height: 110%;
+  padding-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .footer {
-  background-color: darkgrey;
-  margin-left: 200px; }
+  background-color: #090909;
+  padding-left: 200px; }
 
 .section-projects {
-  background-color: grey; }
+  background-color: #090909; }
+
+.section-about {
+  background-image: url("../assets/cabin-bg-new.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .section-about .about-header {
+    margin-bottom: 40px; }
+  .section-about .about-blurb {
+    margin-bottom: 40px; }
+  .section-about .about-links {
+    padding-right: 70%; }
+    .section-about .about-links .about-links-container {
+      display: flex;
+      justify-content: space-around; }
+
+.section-projects .projects-header {
+  margin-bottom: 40px; }
+
+.section-contact {
+  background-image: url("../assets/sky-bg-new.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .section-contact .contact-header {
+    margin-bottom: 40px; }
+  .section-contact .contact-forms {
+    display: flex; }
+    .section-contact .contact-forms .contact-form-fields {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column; }
+      .section-contact .contact-forms .contact-form-fields .contact-entry-field {
+        margin-bottom: 20px; }
+      .section-contact .contact-forms .contact-form-fields input, .section-contact .contact-forms .contact-form-fields textarea {
+        background-color: rgba(201, 201, 201, 0.3);
+        color: #dfdfdf;
+        border: none;
+        border-radius: 3px; }
+    .section-contact .contact-forms .contact-vertical-line {
+      display: inline-block;
+      border-left: 1px solid #dfdfdf;
+      margin: 0 25px;
+      height: auto; }
+
+.side-header {
+  text-align: center;
+  padding-top: 75px; }
+
+.side-list {
+  height: 90%;
+  text-align: center; }
 
 .scrollbar-list {
   height: 90%;
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
+  justify-content: space-around;
+  text-align: right;
+  padding-right: 20%; }
   .scrollbar-list li a {
+    color: #c9c9c9;
     text-decoration: none;
     margin-top: 20%; }
+    .scrollbar-list li a:hover {
+      color: white;
+      transition: 0.2s ease-in-out;
+      text-shadow: 0 0 6px #dfdfdf; }
 
 #carouselExampleIndicators {
   margin-top: 300px; }
+
+.icon-color-control {
+  color: #dfdfdf; }
+  .icon-color-control:hover {
+    color: #939393;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    text-shadow: 0 0 3px grey; }
 
 /*# sourceMappingURL=main.css.map */

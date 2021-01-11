@@ -3,3 +3,30 @@ this appends onto the url at the top. i don't really like that to be honest.
 https://stackoverflow.com/questions/16349490/html-css-buttons-that-scroll-down-to-different-div-sections-on-a-webpage
 
 This is an incredibly basic way to accomplish this. More to be done later
+
+
+Oceanblue's "our projects" is a really good way to do projects
+https://oceanblueproject.org/
+
+
+
+DESIGN FOR:
+    - 1920 x 1080
+    - 1440 x 900
+    - 1280 x 800 (mine)
+        - more like 1280 x 675
+
+The dark side nav bar is kinda bad on low brightness screens, idk
+- add a gradient?
+- turn to brighter color?
+
+Projects:
+- Sudoku (unit tests?)
+- Personal Website
+- AllEars trainer
+- 
+
+Footer (Final chance before user leaves)
+- Email Address
+- Social Icons
+- Resume Download

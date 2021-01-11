@@ -1,3 +1,11 @@
+
+.side-header
+    text-align: center    
+    padding-top: 75px
+    
+.side-list
+    height: 90%
+    text-align: center
 .scrollbar-list
     // TODO
     // switch these heights to be better, use some flexbox stuff prolly
@@ -6,11 +14,15 @@
     display: flex
     flex-direction: column
     justify-content: space-around
+    text-align: right
+    padding-right: 20%
+    
     li
-        
-
-        // I feel like this is janky way of doing it
-        // margin-top: 100%
         a
+            color: $brand-off-white
             text-decoration: none
             margin-top: 20%
+            &:hover
+                color: lighten( $brand-white, 80% )
+                transition: 0.2s ease-in-out
+                text-shadow: 0 0 6px $brand-white

@@ -1,23 +1,25 @@
 
 // keeping all main section containers here for ease of organization
 .side-scrollbar
-    background-color: blue
-
+    background-color: $brand-darkest-transparent
     height: 100%
     width: 200px
     position: fixed
     z-index: 2
     top: 0
     left: 0
+    // opacity: 70%
 
 .section-about, .section-projects, .section-contact
-    height: 100%
-    margin-left: 200px
-    padding-top: 7%
+    height: 110%
+    padding-left: 200px
+    display: flex
+    flex-direction: column
+    justify-content: center
 
 .footer
-    background-color: darkgrey
-    margin-left: 200px
+    background-color: $brand-black
+    padding-left: 200px
 
 .section-projects
-    background-color: grey
+    background-color: $brand-black
