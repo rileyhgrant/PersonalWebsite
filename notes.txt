@@ -1,0 +1,5 @@
+Currently scroll behavior is done via using href="#about" etc
+this appends onto the url at the top. i don't really like that to be honest.   
+https://stackoverflow.com/questions/16349490/html-css-buttons-that-scroll-down-to-different-div-sections-on-a-webpage
+
+This is an incredibly basic way to accomplish this. More to be done later
