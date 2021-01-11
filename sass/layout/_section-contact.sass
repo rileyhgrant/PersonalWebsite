@@ -1,14 +1,17 @@
 
 .section-contact
-    background-image: url( '../assets/sky-bg-new.jpg' )
+    background-image: url( '../assets/sky-bg.jpg' )
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
+
     .contact-header
         margin-bottom: 40px
+
     .contact-forms
         display: flex
+
         .contact-form-fields
             flex-basis: 40%
             display: flex
@@ -26,3 +29,37 @@
             border-left: 1px solid $brand-white
             margin: 0 25px
             height: auto
+
+        .contact-form-manual
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            .real-text
+                h3
+                    margin-bottom: 30px
+
+                .contact-form-manual-entry
+                    margin-bottom: 20px
+                    text-size: 1.3rem
+
+                a
+                    color: $brand-white
+                    font-weight: 600
+                    text-shadow: 0 0 4px grey
+                    &:hover
+                        transition: 0.2s ease-in-out
+                        text-shadow: 0 0 4px $brand-white
+
+                hr
+                    background-color: $brand-white
+                    text-shadow: 0 0 2px grey
+                    width: 100%
+                    margin-top: 30px
+                    margin-bottom: 30px
+
+            .fun-text
+                // margin-top: 80px
+                display: inline-block
+                align-self: flex-end
+                color: darken( $brand-off-white, 30% )
