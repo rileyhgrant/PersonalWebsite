@@ -7,7 +7,7 @@
     background-size: cover
 
     .contact-header
-        margin-bottom: 40px
+        margin-bottom: 70px
 
     .contact-forms
         display: flex
@@ -23,6 +23,14 @@
                 color: $brand-white
                 border: none
                 border-radius: 3px
+            .btn
+                color: $brand-off-white
+                background-color: $brand-darkest-transparent
+                border: 1px solid $brand-off-white
+                &:hover
+                    background-color: darken( $brand-off-white-transparent, 70% )
+                    text-shadow: 0 0 4px grey
+                    transition: 0.2s ease-in-out
 
         .contact-vertical-line
             display: inline-block
@@ -63,3 +71,5 @@
                 display: inline-block
                 align-self: flex-end
                 color: darken( $brand-off-white, 30% )
+
+            

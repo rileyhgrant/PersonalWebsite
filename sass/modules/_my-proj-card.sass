@@ -1,0 +1,24 @@
+.my-proj-card
+    color: $brand-off-white
+    background-color: $brand-darkest-transparent
+    border: 1px solid $brand-off-white
+    box-shadow: 0 0 3px $brand-off-white
+
+    img
+        filter: brightness( 50% )
+
+    .card-body
+        height: 250px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    .btn
+        color: $brand-off-white
+        background-color: $brand-darkest-transparent
+        border: 1px solid $brand-off-white
+        &:hover
+            background-color: darken( $brand-off-white-transparent, 70% )
+            text-shadow: 0 0 4px grey
+            transition: 0.2s ease-in-out
+        
