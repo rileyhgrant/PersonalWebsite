@@ -23,12 +23,17 @@
                 color: $brand-white
                 border: none
                 border-radius: 3px
+                &:focus
+                    outline: none
+                    //border: 1px solid $brand-off-white
+                    box-shadow: 0 0 6px $brand-off-white
             .btn
                 color: $brand-off-white
                 background-color: $brand-darkest-transparent
                 border: 1px solid $brand-off-white
                 transition: all 0.2s ease-in-out
                 &:hover
+                    color: lighten( $brand-off-white, 50% )
                     background-color: darken( $brand-off-white-transparent, 70% )
                     text-shadow: 0 0 4px grey
 
@@ -58,6 +63,8 @@
                     transition: 0.2s ease-in-out
                     &:hover
                         text-shadow: 0 0 4px $brand-white
+                        cursor: pointer
+                        text-decoration: underline
 
                 hr
                     background-color: $brand-white

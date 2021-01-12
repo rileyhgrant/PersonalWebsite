@@ -5,7 +5,9 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <title>Riley H Grant</title>
+  <link rel="icon" href="assets/favicon.ico">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap-grid.min.css">
@@ -36,8 +38,8 @@
       </div>
 
       <div class="side-list">
-        <ul class="scrollbar-list">
-          <li><a href="#about">About</a></li>
+        <ul id="sideNav" class="scrollbar-list">
+          <li class="active"><a href="#about" >About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -111,9 +113,6 @@
               </div>
               <div class="card-body-lower">
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Read More</button>
-                <!--
-                <a href="#" class="btn btn-primary">Read More</a>
-                -->
               </div>
             </div>
           </div>
@@ -121,8 +120,30 @@
           <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
               <div class="modal-content project-modal">
-                <p>Testing some stuff</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class="modal-module project-modal-name">
+                  <h2>Personal Website</h2></div>
+                <div class="modal-module project-modal-img">
+                  <img src="assets/sudoku.png" alt="sudoku image">
+                </div>
+                <div class="modal-module project-modal-tags">
+                  <ul>
+                    <li>Tag one</li>
+                    <li>Tag two</li>
+                    <li>Tag three</li>
+                    <li>Tag four</li>
+                  </ul>
+                </div>
+                <div class="modal-module project-modal-blurb">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                </div>
+                <div class="modal-module project-modal-links">
+                  <ul>
+                    <li><a class="icon-color-control" href="https://github.com/rileyhgrant" target="_blank"><i
+                      class="fa fa-code fa-2x"></i></a></li>
+                    <li><a class="icon-color-control" href="https://github.com/rileyhgrant" target="_blank"><i
+                      class="fa fa-youtube-play fa-2x"></i></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -175,15 +196,22 @@
         <div class="contact-block-container">
 
           <div class="contact-forms">
-            <form action="" class="contact-form-fields">
+            <form class="contact-form-fields" action="https://formspree.io/f/meqpvvak" method="POST" target="_blank">
               <h3>Email Me!</h3>
-              <label for="" placeholder="name">Name</label>
-              <input type="text" class="contact-entry-field">
+              
               <label for="">Email</label>
-              <input type="text" class="contact-entry-field">
+              <input type="email" name="email" class="contact-entry-field contact-email" placeholder="Enter your email">
+              <div class="contact-email-msg"></div>
+
+              <label for="" placeholder="subject">Subject</label>
+              <div class="contact-subject-msg"></div>
+              <input type="subject" name="subject" class="contact-entry-field contact-subject" placeholder="Enter subject line">
+              
               <label for="">Message</label>
-              <textarea class="contact-entry-field" rows="5"></textarea>
-              <button class="btn btn-light">Submit</button>
+              <textarea type="message" name="message" class="contact-entry-field contact-message" placeholder="Enter your message" rows="5"></textarea>
+              <div class="contact-email-msg"></div>
+
+              <button type="submit" class="btn btn-light contact-submit">Submit</button>
             </form>
 
             <span class="contact-vertical-line"></span>
@@ -192,7 +220,7 @@
 
               <div class="real-text">
                 <h3>Or get in contact with me.</h3>
-                <div class="contact-form-manual-entry">Email me directly at grantrileyh@gmail.com</div>
+                <div class="contact-form-manual-entry">Email me directly at <a id="contact-email-to-copy">grantrileyh@gmail.com</a></div>
                 <div class="contact-form-manual-entry">Connect with me on <a
                     href="https://www.linkedin.com/in/rileyhgrant" target="_blank">LinkedIn</a></div>
                 <div class="contact-form-manual-entry">Check out my work on <a href="https://github.com/rileyhgrant"
@@ -222,14 +250,11 @@
   </footer>
 
 
-  <!-- jQuery first, then Tether, then Bootstrap JS. -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-    integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-    crossorigin="anonymous"></script>
+  
+  <!-- jQuery, Bootstrap4, and my JS Script -->
+  <script src="javascript/jquery-3.5.1.min.js"></script>
   <script src="bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+  <script src="javascript/script.js"></script>
 
 </body>
 

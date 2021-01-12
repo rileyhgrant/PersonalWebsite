@@ -107,12 +107,16 @@ h1, h2 {
         color: #dfdfdf;
         border: none;
         border-radius: 3px; }
+        .section-contact .contact-forms .contact-form-fields input:focus, .section-contact .contact-forms .contact-form-fields textarea:focus {
+          outline: none;
+          box-shadow: 0 0 6px #c9c9c9; }
       .section-contact .contact-forms .contact-form-fields .btn {
         color: #c9c9c9;
         background-color: rgba(15, 15, 29, 0.6);
         border: 1px solid #c9c9c9;
         transition: all 0.2s ease-in-out; }
         .section-contact .contact-forms .contact-form-fields .btn:hover {
+          color: white;
           background-color: rgba(23, 23, 23, 0.3);
           text-shadow: 0 0 4px grey; }
     .section-contact .contact-forms .contact-vertical-line {
@@ -135,7 +139,9 @@ h1, h2 {
         text-shadow: 0 0 4px grey;
         transition: 0.2s ease-in-out; }
         .section-contact .contact-forms .contact-form-manual .real-text a:hover {
-          text-shadow: 0 0 4px #dfdfdf; }
+          text-shadow: 0 0 4px #dfdfdf;
+          cursor: pointer;
+          text-decoration: underline; }
       .section-contact .contact-forms .contact-form-manual .real-text hr {
         background-color: #dfdfdf;
         text-shadow: 0 0 2px grey;
@@ -171,6 +177,10 @@ h1, h2 {
     .scrollbar-list li a:hover {
       color: white;
       text-shadow: 0 0 6px #dfdfdf; }
+  .scrollbar-list .active {
+    color: white;
+    text-shadow: 0 0 6px #dfdfdf;
+    text-decoration: underline; }
 
 #carouselExampleIndicators {
   margin-top: 300px; }
@@ -200,17 +210,60 @@ h1, h2 {
   .my-proj-card .btn {
     color: #c9c9c9;
     background-color: rgba(15, 15, 29, 0.6);
-    border: 1px solid #c9c9c9; }
+    border: 1px solid #c9c9c9;
+    transition: all 0.2s ease-in-out; }
     .my-proj-card .btn:hover {
+      color: white;
       background-color: rgba(23, 23, 23, 0.3);
-      text-shadow: 0 0 4px grey;
-      transition: 0.2s ease-in-out; }
+      text-shadow: 0 0 4px grey; }
+    .my-proj-card .btn:active {
+      background-color: red; }
+    .my-proj-card .btn:focus {
+      box-shadow: 0 0 6px #c9c9c9; }
 
 .project-modal {
   padding: 40px 30px;
   background-color: rgba(15, 15, 29, 0.85);
   color: #c9c9c9;
   border: 1px solid #c9c9c9;
-  box-shadow: 0 0 3px #c9c9c9; }
+  box-shadow: 0 0 3px #c9c9c9;
+  display: grid;
+  grid-template-areas: "name name name tags tags" "img img img blurb blurb" "img img img blurb blurb" "img img img links links"; }
+  .project-modal .modal-module {
+    padding: 20px; }
+  .project-modal .project-modal-name {
+    grid-area: name;
+    margin-right: 20px;
+    margin: 0 auto; }
+  .project-modal .project-modal-img {
+    grid-area: img;
+    margin-right: 20px; }
+    .project-modal .project-modal-img img {
+      border-radius: 10%;
+      drop-shadow: 0 0 3px #c9c9c9; }
+  .project-modal .project-modal-tags {
+    grid-area: tags; }
+    .project-modal .project-modal-tags ul {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+      flex-wrap: wrap; }
+      .project-modal .project-modal-tags ul li {
+        padding: 5px;
+        margin: 0 3px;
+        border: 1px solid #c9c9c9;
+        border-radius: 5px;
+        background-color: #0f0f1d; }
+  .project-modal .project-modal-blurb {
+    grid-area: blurb; }
+  .project-modal .project-modal-links {
+    grid-area: links;
+    width: 60%; }
+    .project-modal .project-modal-links ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      text-shadow: 0 0 3px #c9c9c9; }
 
 /*# sourceMappingURL=main.css.map */
