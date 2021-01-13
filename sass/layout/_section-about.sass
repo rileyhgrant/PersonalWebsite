@@ -11,6 +11,12 @@
         margin-bottom: 40px
     .about-links
         padding-right: 70%
+        @media screen and ( max-width: $width-ipad )
+            padding-right: 35%
+        @media screen and ( max-width: $width-phone )
+            padding-right: 0%
+        
+            
         .about-links-container
             display: flex
             justify-content: space-around

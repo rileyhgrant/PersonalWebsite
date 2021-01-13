@@ -12,10 +12,20 @@
     .contact-forms
         display: flex
 
+        @media screen and ( max-width: $width-phone )
+            flex-direction: column
+            
+
         .contact-form-fields
             flex-basis: 40%
             display: flex
             flex-direction: column
+
+            @media screen and ( max-width: $width-phone )
+                margin-bottom: 40px
+                
+
+
             .contact-entry-field
                 margin-bottom: 20px
             input, textarea

@@ -40,6 +40,9 @@ h1, h2 {
   z-index: 2;
   top: 0;
   left: 0; }
+  @media screen and (max-width: 430px) {
+    .side-scrollbar {
+      visibility: hidden; } }
 
 .section-about, .section-projects, .section-contact {
   height: 110%;
@@ -47,6 +50,13 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media screen and (max-width: 430px) {
+    .section-about, .section-projects, .section-contact {
+      padding: 0;
+      margin: 0;
+      height: auto;
+      min-height: 105%;
+      padding-top: 30px; } }
 
 .footer {
   height: 50px;
@@ -55,8 +65,11 @@ h1, h2 {
   flex-direction: column;
   justify-content: space-around; }
 
-.section-projects {
-  background-color: #090909; }
+@media screen and (max-width: 768px) {
+  .section-projects {
+    min-height: 105%;
+    height: auto;
+    padding-top: 30%; } }
 
 .section-about {
   background-image: url("../assets/cabin-bg.jpg");
@@ -70,6 +83,12 @@ h1, h2 {
     margin-bottom: 40px; }
   .section-about .about-links {
     padding-right: 70%; }
+    @media screen and (max-width: 768px) {
+      .section-about .about-links {
+        padding-right: 35%; } }
+    @media screen and (max-width: 430px) {
+      .section-about .about-links {
+        padding-right: 0%; } }
     .section-about .about-links .about-links-container {
       display: flex;
       justify-content: space-around; }
@@ -85,6 +104,9 @@ h1, h2 {
   .section-projects .projects-cards {
     display: flex;
     justify-content: space-around; }
+    @media screen and (max-width: 768px) {
+      .section-projects .projects-cards {
+        flex-direction: column; } }
 
 .section-contact {
   background-image: url("../assets/sky-bg.jpg");
@@ -96,10 +118,16 @@ h1, h2 {
     margin-bottom: 70px; }
   .section-contact .contact-forms {
     display: flex; }
+    @media screen and (max-width: 430px) {
+      .section-contact .contact-forms {
+        flex-direction: column; } }
     .section-contact .contact-forms .contact-form-fields {
       flex-basis: 40%;
       display: flex;
       flex-direction: column; }
+      @media screen and (max-width: 430px) {
+        .section-contact .contact-forms .contact-form-fields {
+          margin-bottom: 40px; } }
       .section-contact .contact-forms .contact-form-fields .contact-entry-field {
         margin-bottom: 20px; }
       .section-contact .contact-forms .contact-form-fields input, .section-contact .contact-forms .contact-form-fields textarea {
@@ -182,9 +210,6 @@ h1, h2 {
     text-shadow: 0 0 6px #dfdfdf;
     text-decoration: underline; }
 
-#carouselExampleIndicators {
-  margin-top: 300px; }
-
 .icon-color-control {
   color: #dfdfdf;
   transition: all 0.2s ease-in-out; }
@@ -197,9 +222,14 @@ h1, h2 {
   color: #c9c9c9;
   background-color: rgba(15, 15, 29, 0.6);
   border: 1px solid #c9c9c9;
-  box-shadow: 0 0 3px #c9c9c9; }
+  box-shadow: 0 0 3px #c9c9c9;
+  width: 25%; }
+  @media screen and (max-width: 768px) {
+    .my-proj-card {
+      width: 100%;
+      margin-bottom: 30px; } }
   .my-proj-card img {
-    filter: brightness(50%);
+    filter: brightness(85%);
     padding: 20px;
     border-radius: 15%; }
   .my-proj-card .card-body {
@@ -229,18 +259,41 @@ h1, h2 {
   box-shadow: 0 0 3px #c9c9c9;
   display: grid;
   grid-template-areas: "name name name tags tags" "img img img blurb blurb" "img img img blurb blurb" "img img img links links"; }
+  @media screen and (max-width: 768px) {
+    .project-modal {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 30px auto;
+      max-width: 80%; } }
   .project-modal .modal-module {
     padding: 20px; }
   .project-modal .project-modal-name {
     grid-area: name;
     margin-right: 20px;
     margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      .project-modal .project-modal-name {
+        padding: 0;
+        margin: 20px auto;
+        text-align: center; } }
   .project-modal .project-modal-img {
     grid-area: img;
     margin-right: 20px; }
     .project-modal .project-modal-img img {
       border-radius: 10%;
       drop-shadow: 0 0 3px #c9c9c9; }
+      @media screen and (max-width: 430px) {
+        .project-modal .project-modal-img img {
+          width: 80%;
+          margin: auto; } }
+    @media screen and (max-width: 768px) {
+      .project-modal .project-modal-img {
+        padding: 0;
+        margin: 20px auto; } }
+    @media screen and (max-width: 430px) {
+      .project-modal .project-modal-img {
+        display: flex; } }
   .project-modal .project-modal-tags {
     grid-area: tags; }
     .project-modal .project-modal-tags ul {
@@ -250,10 +303,15 @@ h1, h2 {
       flex-wrap: wrap; }
       .project-modal .project-modal-tags ul li {
         padding: 5px;
-        margin: 0 3px;
+        margin: 3px 3px;
         border: 1px solid #c9c9c9;
         border-radius: 5px;
         background-color: #0f0f1d; }
+    @media screen and (max-width: 768px) {
+      .project-modal .project-modal-tags {
+        padding: 0;
+        margin: 20px auto;
+        max-width: 80%; } }
   .project-modal .project-modal-blurb {
     grid-area: blurb; }
   .project-modal .project-modal-links {
@@ -265,5 +323,8 @@ h1, h2 {
       justify-content: space-around;
       padding: 0;
       text-shadow: 0 0 3px #c9c9c9; }
+    @media screen and (max-width: 768px) {
+      .project-modal .project-modal-links {
+        width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

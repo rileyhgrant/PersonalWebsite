@@ -9,6 +9,9 @@
     top: 0
     left: 0
     // opacity: 70%
+    @media screen and ( max-width: $width-phone )
+        visibility: hidden
+        
 
 .section-about, .section-projects, .section-contact
     height: 110%
@@ -16,6 +19,13 @@
     display: flex
     flex-direction: column
     justify-content: center
+    @media screen and ( max-width: $width-phone )
+        padding: 0
+        margin: 0
+        height: auto
+        min-height: 105%
+        padding-top: 30px
+
 
 .footer
     height: 50px
@@ -26,4 +36,8 @@
     justify-content: space-around
 
 .section-projects
-    background-color: $brand-black
+    @media screen and ( max-width: $width-ipad )
+        min-height: 105%
+        height: auto
+        padding-top: 30%
+        
